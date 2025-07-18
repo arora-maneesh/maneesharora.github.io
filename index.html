@@ -167,25 +167,63 @@
         }
 
         .book-highlight {
-            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin: 30px 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
+    background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
 
-        .book-highlight h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: white;
-        }
+.book-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 
-        .book-highlight p {
-            font-size: 1.1em;
-            text-align: center;
-        }
+.book-cover {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.cover-image {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.book-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.book-details h3 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: white;
+    line-height: 1.2;
+}
+
+.book-status {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+}
+
+.book-info {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.95);
+}
+
+.book-info strong {
+    color: white;
+}
 
         .contact-info {
             background: #ecf0f1;
@@ -230,6 +268,21 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .book-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.book-details {
+    min-width: auto;
+}
+
+.cover-image {
+    width: 150px;
+    height: 210px;
+}
             
             nav ul {
                 flex-direction: column;
@@ -308,11 +361,19 @@
             <section id="book" class="section">
                 <h2>Book</h2>
                 
-                <div class="book-highlight">
-                    <h3>[Book Title]</h3>
-                    <p><strong>Expected Publication:</strong> [Month Year]</p>
-                    <p><strong>Publisher:</strong> [Publisher Name]</p>
-                </div>
+               <div class="book-highlight">
+    <div class="book-container">
+        <div class="book-cover">
+            <img src="book-cover.jpg" alt="Book Cover" class="cover-image">
+        </div>
+        <div class="book-details">
+            <h3>[Book Title]</h3>
+            <p class="book-status">Forthcoming</p>
+            <p class="book-info"><strong>Expected Publication:</strong> [Month Year]</p>
+            <p class="book-info"><strong>Publisher:</strong> [Publisher Name]</p>
+        </div>
+    </div>
+</div>
                 
                 <p>I am excited to announce my forthcoming book, "[Book Title]", which will be published by [Publisher] in [Year]. This work represents [brief description of the book's contribution to the field].</p>
                 
